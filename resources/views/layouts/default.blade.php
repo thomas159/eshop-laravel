@@ -6,16 +6,20 @@
 <body>
 	
 	@include('includes.header')	
-  	
-<div class="main">	
-
-@yield('content')
+  
+<div class="main">
+	
+@include('includes.categories')
+	<div class="fullcontainer">	
+		<div class="container">
+		@yield('content')
+		</div>
+	</div>
 	
 </div>
 
 	<footer id="footer">
-	</footer>
 	@include('includes.footer')
-	
+	</footer>
 </body>
 </html>

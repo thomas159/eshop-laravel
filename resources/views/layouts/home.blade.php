@@ -11,10 +11,7 @@ E-SHOP
 <div class="main">		
 @yield('content')
 	
-  var_dump($categories);
-@foreach($categories as $category)
- {{ $category->name }}
-@endforeach
+
 
 </div>
 

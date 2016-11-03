@@ -2,9 +2,13 @@
 
 @section('content')
 @if(isset($products))
-@foreach ($products as $product)
-<li><a href="{{ URL::route('products.id',[$product->id] )  }}">{{ $product->name }}</a></li>
-@endforeach
+<div class="grid grid--flexcells grid--1of5">
+  @foreach ($products as $product)
+    <div class="cell">
+      <div class="products-text"><a href="{{ URL::route('products.id',[$product->id] )  }}">{{ $product->name }}</a></div>
+    </div>
+  @endforeach
+</div>
 @elseif(isset($ids))
 <ul>
 <li>{{$ids->name}}</li>

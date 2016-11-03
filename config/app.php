@@ -140,6 +140,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        App\Providers\ComposerServiceProvider::class,
         Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         //original
