@@ -2,10 +2,14 @@
 
 @section('content')
 @if(isset($products))
-<div class="grid grid--flexcells grid--1of5">
+<div class="grid grid--flexcells grid--gutters grid--full gridsm--full gridmd--full gridlg--full gridxl--1of4">
   @foreach ($products as $product)
     <div class="cell">
-      <div class="products-text"><a href="{{ URL::route('products.id',[$product->id] )  }}">{{ $product->name }}</a></div>
+      {{ $product->name }}
+      <div class="products-name"><a href="{{ URL::route('products.id',[$product->id] )  }}"></a></div>
+       <div class="products-desc">
+         {{ str_limit($product->description, $limit = 100) }}
+       </div>
     </div>
   @endforeach
 </div>
